@@ -8,15 +8,15 @@ object Q2 extends App{
     }
 
     def primeSeq(N:Int):Unit={
-        if(N>0){
+        if(N>1){
             primeSeq(N-1);
-            if(primeNo(N)!=0){
-                println(N);
+            if(primeNo(N-1)!=0){
+                println(N-1);
             }
         }
     }
 
     printf("Enter number: ");
     var N=readInt();
-    primeSeq(N-1);
+    primeSeq(N);
 }
